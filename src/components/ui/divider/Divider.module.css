@@ -1,0 +1,41 @@
+.divider {
+    display: flex;
+    flex-direction: row;
+}
+
+.divider:has(.divider-text) {
+    gap: 0.5rem;
+}
+
+.divider.horizontal {
+    flex-direction: row;
+}
+
+.divider.horizontal::before,
+.divider.horizontal::after {
+    content: '';
+    flex: 1;
+    border-bottom: var(--divider-width, 1px) solid var(--divider-color, #555);
+}
+
+.divider-text {
+    font-size: 0.75rem;
+    line-height: 1px;
+    color: #555;
+}
+
+.divider.vertical {
+    flex-direction: column;
+}
+
+.divider.vertical::before,
+.divider.vertical::after {
+    content: '';
+    flex: 1;
+    border-left: var(--divider-width, 1px) solid var(--divider-color, #555);
+}
+
+.divider.vertical .divider-text {
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+}
