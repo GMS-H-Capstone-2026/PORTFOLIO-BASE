@@ -1,0 +1,12 @@
+.stack {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.stack-vertical {
+    flex-direction: column;
+}
+
+.stack-horizontal {
+    flex-direction: row;
+}
